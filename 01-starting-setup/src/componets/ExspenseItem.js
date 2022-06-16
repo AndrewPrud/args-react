@@ -2,15 +2,30 @@ import React from "react";
 import './ExspenseItem.css';
 
 function ExspenseItem() {
-    return(
+
+    const expence = {
+
+    }
+
+    const expenceDate = new Date(2022, 6, 16); // dynamic
+    const expenceTitle = "Clash Royale Pass";
+    const expenceAmount = 5;
+
+
+    return (
+        <>
+        <div className="expence-item">
+            {expenceDate.toISOString()}
+        </div>
+        <div className="expense-item__description">
+                <h2>{expenceTitle}</h2>
+        </div>
         <div>
-            <h4>
-                Date: 6/16/22
-            </h4>
-            <h1 className="expense-item">
-                Current Exspenses: $250
+            <h1 className="expense-item__price">
+                {"$" + expenceAmount}
             </h1>
         </div>
+        </>
     );
 }
 
