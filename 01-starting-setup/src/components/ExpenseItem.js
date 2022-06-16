@@ -2,13 +2,17 @@ import React from 'react';
 import './ExpenseItem.css';
 
 function ExpenseItem() {
+    const expenseDate = new Date(2022, 6, 16);
+    const expenseTitle = 'Netflix Subscription';
+    const expenseAmount = 200.00;
+
     return (
         <div className='expense-item'>
-            <div>June 16, 2022</div>
+            <div>{expenseDate.toISOString()}</div>
             <div className='expense-item__description'>
-                <h2>Netflix Subscription</h2>
+                <h2>{expenseTitle}</h2>
             </div>
-            <div className='expense-item__price'>$20.00</div>
+            <div className='expense-item__price'>{expenseAmount}</div>
         </div>
     );
 }
