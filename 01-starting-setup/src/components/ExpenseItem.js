@@ -8,7 +8,6 @@ function ExpenseItem() {
             </h1>
         </div>
     );
-
 }
 
 export default ExpenseItem;
