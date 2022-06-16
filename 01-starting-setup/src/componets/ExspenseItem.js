@@ -2,31 +2,25 @@
 import React from "react";
 import './ExspenseItem.css';
 
-function ExspenseItem() {
-
-    const expence = {
-
-    }
-
-    const expenceDate = new Date(2022, 6, 16); // dynamic
-    const expenceTitle = "Clash Royale Pass";
-    const expenceAmount = 5;
-
+function ExspenseItem(props) {
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const date = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
 
     return (
-        <>
-        <div className="expence-item">
-            {expenceDate.toISOString()}
+        <div className="expence-item"> 
+            <div>
+                <div>{month}</div>
+                <div>{year}</div>
+                <div>{date}</div>
+            </div>
+            <div className="expense-item__description">
+                <h2>{props.title}</h2>
+            </div>
+            <div className="expense-item__price">
+                {props.cost}
+            </div>
         </div>
-        <div className="expense-item__description">
-                <h2>{expenceTitle}</h2>
-        </div>
-        <div>
-            <h1 className="expense-item__price">
-                {"$" + expenceAmount}
-            </h1>
-        </div>
-        </>
     );
 }
 
