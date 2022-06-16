@@ -1,17 +1,18 @@
 import React from 'react';
 import './ExpenseItem.css';
-function ExpenseItem(){
-    const expenseDate = new Date(2022, 2, 28);
-    const expenseTitle = 'Hulu Subscription';
-    const expenseAmount = '$30.00';
-
+function ExpenseItem(props){
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
     return(
         <div className = 'expense-item'>
-            <div>{expenseDate.toISOString()}</div>
+            <div>{month}</div>
+            <div>{day}</div>
+            <div>{year}</div>
             <h2>
-                {expenseTitle}
+                {props.title}
             </h2>
-            <div>{expenseAmount}</div>
+            <div>{props.amount}</div>
         </div>
     );
 }
