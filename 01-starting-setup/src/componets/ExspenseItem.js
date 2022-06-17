@@ -1,6 +1,5 @@
 import React from "react";
 import './ExspenseItem.css';
-import './ExpenseDate.js';
 import ExspenceDate from "./ExpenseDate";
 
 function ExspenseItem(props) {
@@ -12,7 +11,7 @@ function ExspenseItem(props) {
                 <h2>{props?.title}</h2>
             </div>
             <div className="expense-item__price">
-                {props?.cost}
+            {props?.cost}
             </div>
         </div>
     );
