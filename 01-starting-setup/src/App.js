@@ -1,4 +1,5 @@
 import Expense from './componets/Expense.js';
+import NewExpense from './componets/newExpense/NewExpense.js';
 
 function App() {
 
@@ -30,7 +31,12 @@ function App() {
 ]
 
   return (
-    <Expense bruh = {expense}></Expense>
+    <div>
+      <div>
+      <NewExpense></NewExpense>
+      <Expense bruh = {expense}></Expense>
+      </div>
+    </div>
   )
 }
 

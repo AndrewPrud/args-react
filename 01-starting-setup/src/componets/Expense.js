@@ -1,5 +1,5 @@
 import React from "react";
-import ExspenseItem from './ExspenseItem';
+import ExspenseItem from './ExspenseItem.js';
 import './Expense.css';
 import Card from './Card.js';
 
