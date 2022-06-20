@@ -1,5 +1,6 @@
 import React from 'react';
 import Expenses from './components/Expenses.js';
+import NewExpense from './components/newExpense/NewExpense';
 import './components/Expenses.css';
 function App() {
   const expenses = [
@@ -30,6 +31,7 @@ function App() {
   ]
   return(
     <div>
+      <NewExpense> </NewExpense>
       <Expenses in = {expenses}> </Expenses>
     </div>
   );
