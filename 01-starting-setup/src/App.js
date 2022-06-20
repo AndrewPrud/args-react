@@ -30,8 +30,8 @@ function App() {
 ]
 
   return (
-    <Expense props = {expense}></Expense>
-  );
+    <Expense bruh = {expense}></Expense>
+  )
 }
 
 export default App;

@@ -7,7 +7,7 @@
     background-color: #b8ef7e;
   }
   
-  .expense-item__description h2{
+  .expense-item__description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -32,6 +32,7 @@
     background-color: #5dcfb5;
     border: 1px solid white;
     padding: 0.5rem;
+    border-radius: 12px;
   }
   
   @media (min-width: 580px) {
