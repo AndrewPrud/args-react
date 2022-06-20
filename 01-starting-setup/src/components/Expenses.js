@@ -3,11 +3,15 @@ import ExpenseItem from "./Expenseitem";
 import "./Expenses.css";
 import "./card.js"
 import Card from "./card.js";
+import ExpensesFilter from "./NewExpense/Expensesfilter";
 
 function Expenses(props) {
-   
+   function filterChangeHandler(selectedYear) {
+    console.log(selectedYear);
+   }
     return (
     <Card className="expenses">
+<ExpensesFilter onFilterChange={filterChangeHandler}></ExpensesFilter>
 <ExpenseItem
         title = {props.in[0].title}
         date = {props.in[0].date}
