@@ -1,8 +1,8 @@
+import React,{useState} from 'react';
 import Expenses from './components/Expenses';
 import NewExpense from './components/NewExpense/Newexpense';
 function App() {
-  
-  const expenses = [
+  const InitialExpenses = [
     {
       id: "e1",
       title: "Steam Purchase",
@@ -33,9 +33,12 @@ function App() {
     
     ];
 
+    const[expenses, setExpenses] = useState(InitialExpenses);
 
     function addExpenseHandler(expense){
-        console.log(expense);
+        setExpenses((preExpenses) => {
+          return  [...preExpenses, expense];
+        });
 
     }
   return (
