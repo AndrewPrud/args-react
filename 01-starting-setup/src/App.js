@@ -27,11 +27,15 @@ function App() {
       amount: 2000.12
     }
   ]
+
+  function addExpenseHandler(expense) {
+    console.log(expense);
+  }
   
   return (
     <div>
       <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense = {addExpenseHandler}></NewExpense>
       <Expenses expense = {expenses}></Expenses>
       </div>
     </div>
