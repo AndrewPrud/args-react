@@ -1,5 +1,5 @@
 .new-expense {
-    background-color: #4123a3;
+    background-image: linear-gradient(to bottom right, #F9E7FE, #DAfCFC);
     padding: 1rem;
     margin: 2rem auto;
     width: 50rem;
@@ -34,6 +34,6 @@
   
   .new-expense button.alternative:hover,
   .new-expense button.alternative:active {
-    background-color: linear-gradient(to bottom right, #8A2EFF, #CCE0FF);
+    background-image: linear-gradient(to bottom right, #8A2EFF, #CCE0FF);
   }
   
