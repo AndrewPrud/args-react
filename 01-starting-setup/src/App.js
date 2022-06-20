@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Expenses from './components/Expenses.js';
 import NewExpense from './components/newExpense/NewExpense';
 import './components/Expenses.css';
 function App() {
-  const expenses = [
+  const InitialExpenses = [
     {
       id: 'a1',
       title: 'Paper',
@@ -29,9 +29,15 @@ function App() {
       amount: '$14.00'
     }
   ]
+  const [expenses, setExpenses]= useState(InitialExpenses)
+  function addExpenseHandler(expense){
+    setExpenses((prevExpenses) => {
+      return[...prevExpenses, expense]
+    });
+  }
   return(
     <div>
-      <NewExpense> </NewExpense>
+      <NewExpense onAddExpense = {addExpenseHandler}> </NewExpense>
       <Expenses in = {expenses}> </Expenses>
     </div>
   );
